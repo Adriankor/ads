@@ -1,0 +1,45 @@
+
+    plugins {
+      id 'org.asciidoctor.jvm.pdf' version '3.1.0'
+      id 'org.asciidoctor.jvm.gems' version '3.1.0'
+      id 'org.asciidoctor.jvm.convert' version '3.1.0'
+      id 'org.asciidoctor.jvm.revealjs' version '3.1.0'
+      id 'idea'
+      id 'eclipse'
+    }
+    repositories {
+        jcenter()
+        ruby.gems()
+    }
+    dependencies {
+      asciidoctorGems 'rubygems:rouge:3.15.0'
+    }
+
+    apply plugin: 'java'
+
+    asciidoctorPdf {
+  dependsOn asciidoctorGemsPrepare
+
+  baseDirFollowsSourceFile()
+
+  asciidoctorj {
+    requires 'rouge'
+    attributes 'build-gradle': file('build.gradle'),
+        'sourcedir': project.sourceSets.main.java.srcDirs[0],
+//        'sourcedir': 'docs/main.adoc',
+        'endpoint-url': 'http://example.org',
+        'source-highlighter': 'rouge',
+        'imagesdir': './images',
+        'toc': 'left',
+        'icons': 'font',
+        'idprefix': '',
+        'idseparator': '-'
+	  }
+	}
+
+
+build.dependsOn asciidoctorPdf
+
+task open(type:Exec) {
+  commandLine 'okular', "${buildDir}/docs/asciidocPdf/main.pdf"
+}
