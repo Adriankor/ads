@@ -1,0 +1,386 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 1
+
+:bibtex-file: references.bib
+:bibtex-order: alphabetical
+:bibtex-style: ieee
+:bibtex-format: biblatex
+
+CAUTION: *Dieses Aufgabenblatt ist Voraussetzung für die weitere Abgabe von weiteren Aufgabenblättern.*
+In diesem Aufgabenblatt werden Sie sich mit mehreren verschiedenen Disziplinen beschäftigen, welche Sie zum Teil
+im Selbststudium  meistern müssen.
+
+== Aufgaben
+
+. *Installieren* Sie auf Ihrem Arbeitsrechner das *Java Development Kit (JDK)* und *Gradle*. Die Installationsanleitung für
+Gradle finden Sie unter folgendem Link: https://gradle.org/install. Nach der Installation sollte Ihnen der Befehl
+`gradle --version` auf der *Command-line* zur Verfügung stehen.
++
+IMPORTANT: Am besten nach der Installation ein neues Konsolenfenster öffnen, damit die neuen Suchpfade nach dem Setzen geladen werden!
++
+(2 Pkt.)
+
+. Erstellen Sie bitte einen neuen Projektordner und führen innerhalb diesen per Command-line den Befehl `gradle init` aus,
+  um eine neue Java Application mit den folgenden Optionen.
++
+[source,bash]
+----
+buhrtz@buhrtz-H97M-D3H:~/Desktop/MyTestJavaApp$ gradle init
+
+Select type of project to generate:
+  1: basic
+  2: application
+  3: library
+  4: Gradle plugin
+Enter selection (default: basic) [1..4] 2
+
+Select implementation language:
+  1: C++
+  2: Groovy
+  3: Java
+  4: Kotlin
+  5: Swift
+Enter selection (default: Java) [1..5] 3
+
+Select build script DSL:
+  1: Groovy
+  2: Kotlin
+Enter selection (default: Groovy) [1..2] 1
+
+Select test framework:
+  1: JUnit 4
+  2: TestNG
+  3: Spock
+  4: JUnit Jupiter
+Enter selection (default: JUnit 4) [1..4] 1
+
+Project name (default: MyTestJavaApp): MyTestProg
+Source package (default: MyTestProg):
+
+> Task :init
+Get more help with your project: https://docs.gradle.org/6.3/userguide/tutorial_java_projects.html
+
+BUILD SUCCESSFUL in 26s
+2 actionable tasks: 2 executed
+----
+
++
+Wechseln Sie per *Command-line* in diesen Projektordner und testen Sie die folgenden Gradle-Wrapper-Befehle:
+
++
+[source,bash]
+----
+cd ~/Desktop/MyTestJavaApp
+
+./gradlew clean
+./gradlew build
+./gradlew test
+./gradlew doc
+./gradlew run
+----
+
++
+IMPORTANT: *Alle Abgaben müssen per Gradle-Befehlen baubar und ausführbar sein, sonst wird keine Bewertung des Aufgabenblattes vorgenommen.*
+
++
+(5 Pkt.)
+
+. Fügen Sie bitte die Plugins für IntellJ und Eclipse in die `build.gradle` ein:
++
+[source,groovy]
+----
+plugins {
+    ...
+    id 'eclipse'        // required for generating eclipse project files
+    id 'idea'           // required for generating IntellJ project files
+}
+...
+----
+Testen Sie die neuen Gradle-Wrapper-Befehle mit:
+
++
+[source,bash]
+----
+cd ~/Desktop/MyTestProject
+
+./gradlew eclipse
+./gradlew idea
+----
+
++
+TIP: Nach der *erfolgreichen Ausführung dieser Befehle* können Sie die Projekte in der Eclipse-IDE oder IntellJ-IDE öffnen.
+Die Projektdateien werden automatisch über die Gradle-Wrapper-Befehle generiert.
+
++
+TIP: Sie können sich die Gradle-Wrapper-Tasks mit dem Befehl: `./gradlew task` listen lassen. Die Auflösung
+der Abhängigkeiten können Sie sich mit dem Befehl: `./gradlew build -i` anzeigen lassen. Weitere Command-line-Optionen
+können Sie sich mit dem Befehl `./gradlew --help` abrufen.
+
++
+(4 Pkt.)
+
+. Legen Sie bitte eine neue Klasse mit dem Namen *Console* an.
++
+[plantuml, diagram-class-console, svg]
+....
+
+class Console {
+     {static} +int readIntegerFromStdin(String text)
+     {static} +String readStringFromStdin(String text)
+}
+note right: Klasse für das Einlesen von Ganzzahlen und Strings vom Stdin. \nBeim Auftreten von Exceptions wird das Einlesen\neiner Ganzzahl oder Strings wiederholt.
+....
+
+.. Implementieren Sie eine Methode zum Einlesen von Ganzzahlen (int), zum Beispiel:
++
+[source,bash]
+----
+Enter number for x: 43<enter>
+Enter number for y: 13<enter>
+----
+Schreiben Sie bitte Unittests mit dem JUnit-Testframework für gültige und ungültige Eingaben. Führen Sie diese mit dem Befehl: `./gradlew test` aus.
+
+.. Implementieren Sie eine Methode zum Einlesen von Zeichenketten (String), zum Beispiel:
++
+[source,bash]
+----
+Enter prename: Max<enter> // z.B.
+Enter surname: Mustermann<enter> // z.B.
+----
+Schreiben Sie bitte Unittests mit dem JUnit-Testframework für gültige und ungültige Eingaben. Führen Sie diese mit dem Befehl: `./gradlew test` aus.
+
++
+(8 Pkt.)
+
+. Implementieren Sie bitte ein Konsolenmenü mit folgendem Aussehen:
+
++
+[source,bash]
+----
+Console-Application: Exercise-1
+
+ 1. Greatest Common Divisor (GCD) - (Recursive) Euclid's algorithm subtraction
+ 2. Greatest Common Divisor (GCD) - (Iterative) Euclid's algorithm subtraction
+ 3. Greatest Common Divisor (GCD) - (Recursive) Euclid's algorithm division rest
+ 4. Greatest Common Divisor (GCD) - (Iterative) Euclid's algorithm division rest
+ 5. Sieve of Eratosthanes
+ 0. Exit
+
+ Please enter a number for an option:
+----
+
++
+Beim Auswählen einer Option soll der entsprechende Algorithmus ausgeführt werden. Wählt der Benutzer z.B. die Zahl `5`, dann wird
+der Algorithmus für das Sieb des Eratosthenes aufgerufen. Für die Strukturierung der Klassen und Abarbeitung der folgenden Aufgaben
+soll Ihnen das folgende Bild nach der *UML-Notation* helfen:
+
++
+[plantuml, Command-Pattern, svg]
+....
+class Console {
+     {static} + int readIntegerFromStdin(String text)
+     {static} + String readStringFromStdin(String text)
+}
+note right: Klasse für das Einlesen von Ganzzahlen\n und Strings vom Stdin.
+
+class CommandFactory {
+    + ICommand createGCDSubRecCmd()
+    + ICommand createGCDSubItCmd()
+    + ICommand createGCDDivRestRecCmd()
+    + ICommand createGCDDivRestIteCmd()
+}
+
+class MainApp {
+   {static} - LinkedList<ICommand> commands
+   {static} - CommandFactory cmdFactory
+   {static} + main()
+}
+note right: Enthält die Liste der Kommandos und\neine Factory für die Erzeugung\nder konkreten Command-Klassen.
+
+interface ICommand {
+    + execute()
+}
+note right: Schnittstellenklasse für \ndie Verarbeitung\n von diversen Befehlen
+
+class GCDSubRecCmd{
+    + execute()
+    + toString()
+}
+note top: Klassicher euklidischen Algorithmus\nfür die Berechnung des größten\ngemeinsames Teiler (ggT)\nper Rekursion
+
+class GCDSubItCmd{
+    + execute()
+    + toString()
+}
+class GCDDivRestRecCmd{
+    + execute()
+    + toString()
+}
+class GCDDivRestIteCmd {
+    + execute()
+    + toString()
+}
+note bottom: Moderner euklidischen Algorithmus\nfür die Berechnung des größten\ngemeinsames Teilers (ggT)\nper Iteration
+
+GCDDivRestIteCmd *-- Console : use
+GCDDivRestRecCmd *-- Console : use
+GCDSubItCmd      *-- Console : use
+GCDSubRecCmd     *-- Console : use
+
+CommandFactory <|- ICommand
+ICommand <|-- GCDSubRecCmd
+ICommand <|-- GCDSubItCmd
+ICommand <|-- GCDDivRestRecCmd
+ICommand <|-- GCDDivRestIteCmd
+
+MainApp     *-- CommandFactory : use
+....
+
++
+https://www.w3schools.com/java/java_interface.asp
+
++
+http://openbook.rheinwerk-verlag.de/javainsel9/
+
++
+http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm
+
++
+https://sourcemaking.com/design_patterns
+
++
+(12 Pkt.)
+
+. Implementieren Sie den *klassischen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *ohne Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
++
+[source,bash,linesmen]
+----
+EuclidSubstractionIterative(a,b)
+    wenn a = 0
+        dann return b
+    sonst solange b != 0
+        wenn a > b
+            dann a <-- a - b
+        sonst b <-- b - a
+    return a
+----
++
+(5 Pkt.)
+. Implementieren Sie den *klassischen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *mit Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
++
+[source,bash,linesmen]
+----
+EuclidSubstractionRecursive(a,b)
+    wenn b = 0
+        dann return a
+    sonst wenn a = 0
+        return b
+    sonst wenn a > b
+        dann return EuclidSubstractionRecursive(a - b, b)
+    sonst return EuclidSubstractionRecursive( a, b - a)
+----
++
+(5 Pkt.)
+
+. Implementieren Sie den *modernen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *ohne Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
++
+[source,bash,linesmen]
+----
+EuclidDivisionRestIterative(a,b)
+    solange b != 0
+        h <-- a mod b
+        a <-- b
+        b <-- h
+     return a
+----
++
+(5 Pkt.)
+
+. Implementieren Sie den *modernen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *mit Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
++
+[source,bash,linesmen]
+----
+EuclidDivisionRestRecursive(a,b)
+    wenn b = 0
+         dann return a
+    sonst return Euclid(b, a mod b)
+----
++
+(5 Pkt.)
+
+. Implementieren Sie das Sieb des Eratosthenes. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
+
++
+[source,bash,]
+----
+- Schreibe alle Zahlen auf (ab 2 bis Maximalwert N),
+- Begreife alle diese Zahlen als potentielle Primzahlen,
+- Die kleinste unmarkierte Zahl ist immer eine Primzahl,
+- Wähle die kleinste unmarkierte Zahl und markiere alle Vielfachen als zusammengesetzt,
+- Wähle die nächste unmarkierte Zahl und markiere alle Vielfachen als zusammengesetzt,
+- usw.;
+----
++
+https://www.mathe-lexikon.at/arithmetik/natuerliche-zahlen/teilbarkeit/primzahlen/sieb-des-eratosthenes.html
++
+(5 Pkt.)
+
+. Testen Sie Ihr Konsolenprogramm in der Kommandozeile, damit Sie keine Probleme mit dem Stdin bekommen,
+  muss in der `build.gradle`der folgende Abschnitt eingefügt werden:
++
+[source,groovy]
+----
+run {
+    standardInput = System.in
+}
+----
++
+Rufen Sie die Java-Application mit dem Befehl `./gradlew run --console=plain` auf, um den Konsolenoutput zu reduzieren.
++
+TIP: Gradle-Beispiel: https://github.com/CSV-Tom/gradle-example
++
+(3 Pkt.)
+
+. Nennen und beschreiben Sie  mindestens fünf Eigenschaften von Algorithmen.
++
+(5 Pkt.)
+
+
+== Deadline und Punkte
+
+.Maximale Punkte und Deadline
+|===
+|*Deadline:*               | *16.04.2020*
+|*Maximale ZKP:*           | *1 ZKP (Zusätzlicher Klausur Punkt)*
+|*Maximale Punktanzahl:*   | *64 Punkte* == *100 %* == *1 ZKP*
+|===
+
+NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *1 ZKP * 1.0 = 1 ZKP*.
+Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *1 ZKP * 0.5 = 0.5 ZKP*
+usw.
+
+
+
+== Feedback
+
+*Senden Sie mir gerne konstruktives Feedback zu den Aufgabenblättern und Dokumenten zu.* Diese Ausarbeitung sind relativ Neu.
+
+CAUTION: Verbesserungvorschläge für dieses Aufgabenblatt können Sie gerne per Git-Patch oder E-Mail an mich senden.
+         Git-Patches geben Ihnen die Möglichkeit zusätzliche Punkte für ein Aufgabenblatt zu erhalten, dafür müssen die
+         Git-Patches atomar sein und im ZIP-Archive abgelegt werden.
+
+
+
+== Referenzen
+
+. http://openbook.rheinwerk-verlag.de/javainsel9[Openbook: Java ist auch eine Insel]
+.. http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm[Java ist auch eine Insel - Kapitel Vererbung]
+. https://www.w3schools.com/java/java_interface.asp[JAVA Interfaces]
+. https://gradle.org[Gradle]
+.. https://gradle.org/install/[Gradle Installation]
+.. https://gradle.org/guides/[Gradle Tutorials and Guides]
+. https://git-scm.com/[Git]
+.. https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
+.. https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
+. http://junit.org[JUnit-Testframework]
+. https://studi.f4.htw-berlin.de/www/[HTW Berlin - Projekteserver]
+

@@ -1,4 +1,4 @@
 include 'Introduction'
-include 'Exercise-1'
+include 'Exercises'
 
 rootProject.name = 'Algo'

@@ -1,0 +1,165 @@
+
+= Laboreinheit: Algorithmen und Datenstrukturen - Introduction
+
+:stem:
+
+== Einführung
+
+*Sehr geehrte Studenten und Studentinnen,*
+
+auf Grund der *Corona-Krise* wird z.Z. *keine Präsenzveranstaltung* bis zum *Zeitpunkt X* stattfinden. Deswegen werde ich Ihnen
+schriftliche Anweisungen und Informationen für die Bearbeitung der Aufgaben über *Moodle* zukommen lassen, damit Sie in der Lage sind
+die Aufgaben im Selbststudium zu lösen. Außerdem werde ich Ihnen Literatur und Links empfehlen, welche Sie für die Lösung der Aufgaben benötigen.
+
+
+== Kurze Vorstellung meiner Person
+
+Kurz zu meiner Person: Meine Name ist Tom Kamberg-Buhrtz und ich bin selbst Absolvent der Hochschule für Technik und
+Wirtschaft Berlin. Zurzeit bin ich in der freien Wirtschaft tätig. Nebenbei arbeite ich
+als Dozent für die Laboreinheit Algorithmen und Datenstrukturen an der HTW Berlin.
+
+=== Curriculum Vitae (CV)
+
+* *2007 Abschluss* - Abitur mit beruflichen Abschluss als technischer Assistent für Informatik an der BSEE-Rostock,
+* *2008 Abschluss* - Fachinformatiker für Anwendungsentwicklung an der BSEE-Rostock,
+* *2011 Abschluss* - Bachelorstudium der angewandten Informatiik an der Hochschule für Technik und Wirtschaft Berlin,
+* *2013 Abschluss* - Masterstudium der angewandten Informatik an der Hochschule für Technik und Wirtschaft Berlin,
+* *2013 Tätigkeit* - Wissenschaftlicher Mitarbeiter in den Forschungsgruppen: INKA, MINERVA, BeWiTec und SIGNAL.
+    ** Entwicklung von mehreren Projekte im Zusammenarbeit mit Museen
+    ** Organisation von Konferenzen. z.B. KUI- und WCI-Konferenz
+    ** Koordination von Projekten
+* *2015 Tätigkeit - Embedded Firmwareentwickler bis heute;*
+    ** *Kernkompetenzen:* `C++`-Entwicklung und `DevOp`
+    ** Betreuung und Wartung eingener Linux-Distributionen und Treiberentwicklung,
+    ** Betreuung und Weiterentwicklung von Middleware für die Kommunikation,
+    ** Betreuung und Weiterentwicklung der Protokollierung und Prozesssteuerung,
+    ** Betreuung und Wartung der IT-Infrastruktur für die Softwareabteilung,
+    ** Weiterentwicklung und kontinuierliche Verbesserung von Continuous Intergration (CI) und Continuous Delivery (CD),
+    ** Qualitätssicherung und Einhaltung von Medizinrichtlinien und Normen;
+
+TIP: Zu den Aufgaben des DevOps Engineers gehören das Entwerfen und Erstellen von Skripten und Entwicklungstools
+     für eine agile Softwareentwicklung, das Ausführen von Administrationstätigkeiten,
+     das Monitoring, die Programmierung von Open Source, die Konzipierung und Durchführung von Gerätetests,
+     das Logging und die Verwaltung von Servern und Buildmaschinen.
+
+== Themen
+
+|===
+| Einführung | Allgemein
+| Listen | Einfach-, Doppelt- und Zyklisch verkettete Liste
+| Datenorganisation | Daten, Speicherbereiche, ADT, Stack, Queue und Dequeue
+| Sortieralgorithmen |Insertionsort, Bubblesort, Selectionsort, Heapsort und Radixsort und Suchverfahren
+| Offene Hashverfahren | Lineares Hashing, Quadratisches Hashing und Double Hashing
+| Kompressionverfahren | Verlustfreie Kompressionsalgorithmen z.B. Lauflängen- und Huffmankodierung
+| Verschlüsselung | Cäsar-Chiffre, Private-Public-Keyverfahren, Monoalphabetische und Polyalphabetische Substitution
+| Klausurvorbereitung + Fragerunde | ? ? ?
+|===
+
+
+== Abgabe der Aufgabenblätter
+
+Im Folgenden sind die Besonderheiten beschrieben, welche Sie bei der Abgabe von Aufgabenblättern beachten müssen.
+
+IMPORTANT: Die Hinweise sollen Sie genau lesen und verstehen. Bei Fragen wenden Sie sich bitte rechtzeitig an mich per Moodle-Chat oder Mail.
+
+=== Anforderungen an die Abgabe
+
+. *Alle Dateien müssen als ZIP-Archive (.zip) abgegeben werden*,
+. Schriftliche Ausarbeitungen *müssen* im *PDF-Format* abgegeben werden,
+. Für die Zulassung zur Klausur müssen sie *mindestens 3 Punkte* erreichen,
+. Die *Abgaben* müssen *per Gradle-Befehl baubar und ausführbar* sein,
+. Es können *maximal 6 zusätzliche Punkte* zur Klausur erreicht werden,
+. Die *maximale Anzahl der möglichen Punkte pro Aufgabenblatt* und die *Deadline* steht auf der letzten Seite jedes Aufgabenblattes,
+  sonst wird *keine Bewertung des Aufgabenblattes vorgenommen;*
+
+
+=== Projektstrukturierung der Abgabe
+
+Im Folgenden ist eine Beispielstruktur abgebildet. In diesem Beispiel ist eine Trennung zwischen dem Java-Projekt und der
+allgemeinen Dokumentation abgebildet. Diese Trennung sollten Sie unbedingt beibehalten, damit bei einem Cleanup des
+Build-Verzeichnisses Ihre ausgearbeitet Dokumentation nicht verschwindet bzw. gelöscht wird.
+
+[source,bash]
+----
+Excerise-1
+├── documents
+│   └── MyDocument.pdf
+└── myapp
+   ├── build.gradle
+   ├── gradle
+   │   └── wrapper
+   │       ├── gradle-wrapper.jar
+   │       └── gradle-wrapper.properties
+   ├── gradlew
+   ├── gradlew.bat
+   ├── settings.gradle
+   └── src
+       ├── main
+       │   ├── java
+       │   │   └── MyTestApp
+       │   │       └── App.java
+       │   └── resources
+       └── test
+           ├── java
+           │   └── MyTestApp
+           │       └── AppTest.java
+           └── resources
+----
+
+IMPORTANT: Packen Sie alle Dokumente und Sourcedateien zu einem ZIP-Archiv zusammen und laden Sie dieses ZIP-Archiv ins Moodle.
+
+=== Erstellung der Dokumentation
+
+Die schriftliche Dokumentation *muss im PDF-Format abgegeben* werden. Sie können Ihre Dokumentation gerne mit LaTeX, AsciiDoc, Word bzw. ein
+Dokumentationstool Ihrer Wahl erzeugen. Dieses Dokument ist mit AsciiDoc erstellt. Das Beispiel finden Sie auf Github
+unter dem folgenden Link: https://github.com/CSV-Tom/ads.git
+
+TIP: Desweiteren kann ich Ihnen persönlich LaTeX ans Herz legen. Der Einarbeitungsaufwand ist zum
+     Anfang hoch! Ich persönlich habe meine Masterarbeit mit LaTeX geschrieben und bereue es bis
+     zum heutigen Zeitpunkt nicht!
+
+== Git - Open-Source-Tool zur verteilten Versionskontrolle von Software
+
+TIP: Sie sollten sich definitiv parallel mit dem Versionkontrollsystem *git* beschäftigen.
+     Allerspätestens bei Ihrem Bachelorabschluss muss dieses Werkzeug gut beherrscht werden.
+
+*Git* ist ein weit verbreitetes Open-Source-Tool zur verteilten Versionskontrolle von Source Code.
+Es wird sowohl in Unternehmen als auch von privaten Entwicklern weltweit genutzt und funktioniert zusammen
+mit verschiedensten Plattformen und IDEs.
+
+Die Versionskontrolle macht es einfach, Änderungen eigenständig und von überall aus dem Projekt hinzuzufügen,
+diese Änderungen zu protokollieren und nachzuvollziehen sowie zu einem späteren Zeitpunkt auf ältere Stände des
+Projekts zuzugreifen. Git ist plattformunabhängig und lässt sich somit in nahezu jeder Umgebung nutzen.
+
+Außerdem eigenet es sich hervorragend für die kollaborative Zusammenarbeit von mehreren Entwicklern an einem Software-Projekt.
+
+TIP: Für das Anlegen von Git-Repositories kann ich Ihnen den *Projekteserver* https://studi.f4.htw-berlin.de/www/ der HTW Berlin empfehlen.
+     Die Anmeldedaten sind s0XXXXXX und Ihr Standardpasswort
+
+. https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
+. https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
+
+
+== Links und Referenzen
+
+. http://openbook.rheinwerk-verlag.de/javainsel9[Openbook: Java ist auch eine Insel]
+. https://gradle.org[Gradle]
+.. https://gradle.org/install/[Gradle Installation]
+.. https://gradle.org/guides/[Gradle Tutorials and Guides]
+. https://git-scm.com/[Git]
+.. https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
+.. https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
+. https://asciidoctor.org[Asciidoctor]
+.. https://asciidoctor.org/docs/asciidoc-syntax-quick-reference[Asciidoctor - Quick Reference]
+. http://junit.org[JUnit-Testframework]
+. https://studi.f4.htw-berlin.de/www/[HTW Berlin - Projekteserver]
+. https://moodle.htw-berlin.de/login/index.php
+. https://www.deepl.com/translator
+
+== Feedback
+
+*Senden Sie mir gerne konstruktives Feedback zu den Aufgabenblättern und Dokumenten zu.* Diese Ausarbeitung sind relativ Neu.
+
+CAUTION: Verbesserungvorschläge für dieses Aufgabenblatt können Sie gerne per Git-Patch oder E-Mail an mich senden.
+Git-Patches geben Ihnen die Möglichkeit zusätzliche Punkte für ein Aufgabenblatt zu erhalten, dafür müssen die
+Git-Patches atomar sein und im ZIP-Archive abgelegt werden.

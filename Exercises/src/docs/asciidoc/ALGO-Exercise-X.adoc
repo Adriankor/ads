@@ -1,0 +1,130 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt X
+
+== Aufgaben
+
+
+
+[plantuml, diagram-classes, svg]
+....
+
+class Console {
+     {static} +int readIntegerFromStdin(String text)
+     {static} +String readStringFromStdin(String text)
+}
+note right: Klasse für das Einlesen von Ganzzahlen\n und Strings vom Stdin.
+
+class CommandFactory {
+    +ICommand createGCDSubRecCmd()
+    +ICommand createGCDSubItCmd()
+    +ICommand createGCDDivRestRecCmd()
+    +ICommand createGCDDivRestIteCmd()
+}
+
+interface ICommand {
+    + execute()
+    + toString()
+}
+note right: Schnittstellenklasse für \ndie Verarbeitung\n von diversen Befehlen
+
+class GCDSubRecCmd{
+    + execute()
+    + toString()
+}
+note top: Schnittstellenklasse für \ndie Verarbeitung\n von diversen Befehlen
+
+class GCDSubItCmd{
+    + execute()
+    + toString()
+}
+class GCDDivRestRecCmd{
+    + execute()
+    + toString()
+}
+class GCDDivRestIteCmd {
+    + execute()
+    + toString()
+}
+GCDDivRestIteCmd *-- Console : use
+GCDDivRestRecCmd *-- Console : use
+GCDSubItCmd      *-- Console : use
+GCDSubRecCmd     *-- Console : use
+
+CommandFactory <|- ICommand
+ICommand <|-- GCDSubRecCmd
+ICommand <|-- GCDSubItCmd
+ICommand <|-- GCDDivRestRecCmd
+ICommand <|-- GCDDivRestIteCmd
+....
+
+https://plantuml.com/de/class-diagram
+
+https://plantuml.com/de/skinparam
+
+
+
+[ditaa, "ditaa-diagram", svg]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
+
+
+
+[plantuml, diagram-classes2, svg]
+....
+
+skinparam monochrome true
+
+actor User
+participant "First Class" as A
+participant "Second Class" as B
+participant "Last Class" as C
+
+User -> A: DoWork
+activate A
+
+A -> B: Create Request
+activate B
+
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+
+B --> A: Request Created
+deactivate B
+
+A --> User: Done
+deactivate A
+
+....
+
+A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+[bibliography]
+== References
+
+- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+From Journeyman to Master. Addison-Wesley. 1999.
+- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides. Design Patterns:
+Elements of Reusable Object-Oriented Software. Addison-Wesley. 1994.
