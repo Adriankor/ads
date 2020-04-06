@@ -349,7 +349,7 @@ TIP: Gradle-Beispiel: https://github.com/CSV-Tom/gradle-example
 
 .Maximale Punkte und Deadline
 |===
-|*Deadline:*               | *16.04.2020*
+|*Deadline:*               | *23.04.2020 - 23:55*
 |*Maximale ZKP:*           | *1 ZKP (Zusätzlicher Klausur Punkt)*
 |*Maximale Punktanzahl:*   | *64 Punkte* == *100 %* == *1 ZKP*
 |===
