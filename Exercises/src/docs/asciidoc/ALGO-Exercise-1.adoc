@@ -1,17 +1,12 @@
 = Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 1
 
-:bibtex-file: references.bib
-:bibtex-order: alphabetical
-:bibtex-style: ieee
-:bibtex-format: biblatex
-
 CAUTION: *Dieses Aufgabenblatt ist Voraussetzung für die weitere Abgabe von weiteren Aufgabenblättern.*
 In diesem Aufgabenblatt werden Sie sich mit mehreren verschiedenen Disziplinen beschäftigen, welche Sie zum Teil
-im Selbststudium  meistern müssen.
+im Selbststudium meistern müssen.
 
 == Aufgaben
 
-. *Installieren* Sie auf Ihrem Arbeitsrechner das *Java Development Kit (JDK)* und *Gradle*. Die Installationsanleitung für
+. *Installieren* Sie auf Ihrem Arbeitsrechner, das *Java Development Kit (JDK)* und *Gradle*. Die Installationsanleitung für
 Gradle finden Sie unter folgendem Link: https://gradle.org/install. Nach der Installation sollte Ihnen der Befehl
 `gradle --version` auf der *Command-line* zur Verfügung stehen.
 +
@@ -20,7 +15,7 @@ IMPORTANT: Am besten nach der Installation ein neues Konsolenfenster öffnen, da
 (2 Pkt.)
 
 . Erstellen Sie bitte einen neuen Projektordner und führen innerhalb diesen per Command-line den Befehl `gradle init` aus,
-  um eine neue Java Application mit den folgenden Optionen.
+  um eine neue Java Application mit den folgenden Optionen zu erstellen.
 +
 [source,bash]
 ----
@@ -74,7 +69,7 @@ cd ~/Desktop/MyTestJavaApp
 ./gradlew clean
 ./gradlew build
 ./gradlew test
-./gradlew doc
+./gradlew javadoc
 ./gradlew run
 ----
 
@@ -264,6 +259,8 @@ EuclidSubstractionIterative(a,b)
     return a
 ----
 +
+Schreiben Sie ein Unittest mit dem JUnit-Testframework, welcher nur die Methode für die Berechnung des ggTs testet.
++
 (5 Pkt.)
 . Implementieren Sie den *klassischen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *mit Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
 +
@@ -279,6 +276,8 @@ EuclidSubstractionRecursive(a,b)
     sonst return EuclidSubstractionRecursive( a, b - a)
 ----
 +
+Schreiben Sie ein Unittest mit dem JUnit-Testframework, welcher nur die Methode für die Berechnung des ggTs testet.
++
 (5 Pkt.)
 
 . Implementieren Sie den *modernen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *ohne Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
@@ -293,6 +292,8 @@ EuclidDivisionRestIterative(a,b)
      return a
 ----
 +
+Schreiben Sie ein Unittest mit dem JUnit-Testframework, welcher nur die Methode für die Berechnung des ggTs testet.
++
 (5 Pkt.)
 
 . Implementieren Sie den *modernen euklidischen Algorithmus* für die Berechnung des größten gemeinsamen Teilers (ggTs) *mit Rekursion*. Der Algorithmus soll über die Command-line auswählbar und parametrierbar sein.
@@ -304,6 +305,8 @@ EuclidDivisionRestRecursive(a,b)
          dann return a
     sonst return Euclid(b, a mod b)
 ----
++
+Schreiben Sie ein Unittest mit dem JUnit-Testframework, welcher nur die Methode für die Berechnung des ggTs testet.
 +
 (5 Pkt.)
 
@@ -320,12 +323,14 @@ EuclidDivisionRestRecursive(a,b)
 - usw.;
 ----
 +
+Schreiben Sie ein Unittest mit dem JUnit-Testframework, welcher nur die Methode für die Berechnung der Primzahlen testet.
++
 https://www.mathe-lexikon.at/arithmetik/natuerliche-zahlen/teilbarkeit/primzahlen/sieb-des-eratosthenes.html
 +
 (5 Pkt.)
 
 . Testen Sie Ihr Konsolenprogramm in der Kommandozeile, damit Sie keine Probleme mit dem Stdin bekommen,
-  muss in der `build.gradle`der folgende Abschnitt eingefügt werden:
+  muss in der `build.gradle` der folgende Abschnitt eingefügt werden:
 +
 [source,groovy]
 ----
@@ -370,17 +375,38 @@ CAUTION: Verbesserungvorschläge für dieses Aufgabenblatt können Sie gerne per
 
 
 
-== Referenzen
 
-. http://openbook.rheinwerk-verlag.de/javainsel9[Openbook: Java ist auch eine Insel]
-.. http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm[Java ist auch eine Insel - Kapitel Vererbung]
-. https://www.w3schools.com/java/java_interface.asp[JAVA Interfaces]
-. https://gradle.org[Gradle]
-.. https://gradle.org/install/[Gradle Installation]
-.. https://gradle.org/guides/[Gradle Tutorials and Guides]
-. https://git-scm.com/[Git]
-.. https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
-.. https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
-. http://junit.org[JUnit-Testframework]
-. https://studi.f4.htw-berlin.de/www/[HTW Berlin - Projekteserver]
+[bibliography]
+== References
 
+- [[[REF1, 1]]]
+Thomas Ottmann and Peter Widmayer,
+Algorithmen und Datenstrukturen (German Edition),
+Spektrum Akademischer Verlag}, 2002,
+ISBN: 3827410290.
+
+- [[[REF2, 2]]]
+Sebastian Dworatschek,
+Grundlagen der Datenverarbeitung (de Gruyter Lehrbuch) (German Edition),
+de Gruyter,
+1989,
+ISBN: 3110120259.
+
+- [[[REF5, 3]]]
+Robert Sedgewick, Algorithmen in C++ (German Edition),
+Pearson Studium,
+2002,
+ISBN: 3827370264.
+
+- [[[REF10, Java10]]] http://openbook.rheinwerk-verlag.de/javainsel9[Openbook: Java ist auch eine Insel]
+- [[[REF11, Java11]]] http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm[Java ist auch eine Insel - Kapitel Vererbung]
+- [[[REF12, Java12]]] http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm[Java ist auch eine Insel - Kapitel Vererbung]
+- [[[REF13, Java13]]] https://www.w3schools.com/java/java_interface.asp[JAVA Interfaces]
+- [[[REF14, Java14]]]  http://junit.org[JUnit-Testframework]
+- [[[REF20, Gradle20]]]  https://gradle.org[Gradle]
+- [[[REF21, Gradle21]]]  https://gradle.org/install/[Gradle Installation]
+- [[[REF22, Gradle22]]]  https://gradle.org/guides/[Gradle Tutorials and Guides]
+- [[[REFGitSCM, Git-SCM]]]  https://git-scm.com/[Git]
+- [[[REFGitENv2Book, Git-EN-v2-Book]]]  https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
+- [[[REFGitDEv2Book, Git-DE-v2-Book]]]  https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
+- [[[REFHWProjekteServer, HTW70]]]  https://studi.f4.htw-berlin.de/www/[HTW Berlin - Projekteserver]
