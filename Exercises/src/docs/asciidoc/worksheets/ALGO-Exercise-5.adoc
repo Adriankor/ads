@@ -1,0 +1,53 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 5
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
+
+include::{docdir}/../includes/caution.adoc[]
+
+== Aufgaben
+
+. Grundlagen und Implementierung von Hashverfahren
++
+(22 Pkt.)
+
+.. Wozu dienen Hashverfahren (Nennen Sie Anwendungsgebiete)?
+.. Welche Vor- und Nachteile bieten Hashverfahren für welche Anwendungsgebiete?
+.. Was versteht man unter dem Horner-Schema und wofür wird es beim Hashing verwendet?
+.. Implementieren Sie notwendige Funktionen zur Verwaltung einer Hashtabelle für einfache Zahlenwerte.
+
+. Implementierung von Sondierungsfunktionen
++
+(21 Pkt.)
+
+.. Wann und wozu werden Sondierungsfunktionen gebraucht?
+.. Welche Sondierungsfunktionen sind ihnen bekannt (mindestens 3)?
+.. Zeigen Sie anhand selbstgewählter Beispiele den Umgang mit den verschiedenen Sondierungsfunktionen.
+.. Implementieren Sie eine der von Ihnen genannten Sondierungsfunktionen und leiten Sie deren Komplexität im Worst-, Average- und Best-Case her.
+
+. Implementierung einiger Sortierfunktionen
++
+(15 Pkt.)
+
+.. Implementieren Sie die Datenstruktur `Student` als Array.
+.. Implementieren Sie 4 verschiedene Sortieralgorithmen zur Sortierung des Arrays anhand der Matrikelnummer.
+.. Wie müssten Sie ihre Sortierfunktionen verallgemeinern, damit ohne *Copy + Paste* auch nach den anderen Merkmalen
+   der Datenstruktur `Student` sortiert werden kann? _(Stichpunkte zur JAVA-Implementierung - nicht direkt implementieren)_
+
+
+== Deadline und Punkte
+
+.Maximale Punkte und Deadline
+|===
+|*Deadline:*               | *24.06.2020*
+|*Maximale ZKP:*           | *3 ZKP (Zusätzlicher Klausur Punkt)*
+|*Maximale Punktanzahl:*   | *58 Punkte* == *100 %* == *3 ZKP*
+|===
+
+NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *3 ZKP * 1.0 = 3 ZKP*.
+Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *3 ZKP * 0.5 = 1.5 ZKP*
+usw.
+
+include::{docdir}/../includes/terms-of-delivery.adoc[]
+
+include::{docdir}/../includes/feedback.adoc[]
+
+include::{docdir}/../includes/references.adoc[]

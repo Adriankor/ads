@@ -1,0 +1,69 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 4
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
+
+include::{docdir}/../includes/caution.adoc[]
+
+== Aufgaben
+
+. Implementierung eines Datentyps zur Repräsentation der Häuser und der Skyline
++
+(9 Pkt.)
+
+.. Beschreiben Sie eine sinnvolle Datenstruktur für die Häuser.
+.. Beschreiben Sie eine sinnvolle Datenstruktur für die Skyline.
+.. Implementieren Sie diese Datenstrukturen.
+
+. Implementierung eines Algorithmus zur Lösung des Skylineproblems
++
+(18 Pkt.)
+
+
+.. Beschreiben Sie den Algorithmus in Pseudocode und erklären Sie die Lösung.
+.. Implementieren Sie ihren Algorithmus zur Lösung des Problems.
+.. Implementieren Sie ein Programm zur Eingabe der Häuser und Ausgabe der Skyline (muss nicht ASCII-Art werden ;-) ).
+
+. Implementierung eines abstrakten Datentyps für das Puzzle Türme von Hanoi
++
+(16 Pkt.)
+
+.. Erarbeiten Sie sich die notwendigen Operationen zur Lösung des Puzzles \enquote{Türme von Hanoi}
+.. Bestimmen Sie anhand der notwendigen Operationen einen sinnvollen Datentyp zur Lösung des Puzzles.
+.. Definieren Sie Schnittstellenfunktionen, die notwendig sind, um diesen Datentyp von außen nutzbar zu machen.
+.. Implementieren Sie die Datenstruktur.
+
+
+. Implementierung eines Algorithmus zur Lösung des Puzzles *Türme von Hanoi* - selbstverständlich
+  für eine variable (gern aber fest einkompilierte) Anzahl von Scheiben.
++
+(13 Pkt.)
+
+.. Finden Sie eine Herangehensweise, die das Problem geeignet löst.
+.. Nutzen Sie den oben von Ihnen definierten Datentyp zum Entwurf des Algorithmus.
+.. Implementieren Sie notwendige Funktionen zur Lösung des Problem unter Verwendung der von Ihnen definierten
+   Schnittstellenfunktionen.
+
+
+. Leiten Sie anhand ihres Quelltextes die Komplexität Ihrer Lösung des Puzzles her.
++
+(6 Pkt.)
+
+
+
+== Deadline und Punkte
+
+.Maximale Punkte und Deadline
+|===
+|*Deadline:*               | *11.06.2020*
+|*Maximale ZKP:*           | *3 ZKP (Zusätzlicher Klausur Punkt)*
+|*Maximale Punktanzahl:*   | *62 Punkte* == *100 %* == *3 ZKP*
+|===
+
+NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *3 ZKP * 1.0 = 3 ZKP*.
+Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *3 ZKP * 0.5 = 1.5 ZKP*
+usw.
+
+include::{docdir}/../includes/terms-of-delivery.adoc[]
+
+include::{docdir}/../includes/feedback.adoc[]
+
+include::{docdir}/../includes/references.adoc[]

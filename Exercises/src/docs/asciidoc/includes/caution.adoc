@@ -1,0 +1,5 @@
+
+CAUTION: Zum Lösen des Aufgabenblattes verwenden Sie bitte die *Standarddatentypen und –definition von JAVA*. `LinkedList<T>`,
+`ArrayList` usw. *dürfen nicht verwendet werden.* Es darf nur für die Verwaltung der `ICommands` eine `LinkedList<ICommand>`
+verwendet werden (siehe für weitere Informationen erstes Aufgabenblatt), dies soll Ihnen die Erstellung des Command-line
+Menüs erleichtern.

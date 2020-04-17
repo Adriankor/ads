@@ -1,4 +1,5 @@
 = Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 1
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
 
 CAUTION: *Dieses Aufgabenblatt ist Voraussetzung für die weitere Abgabe von weiteren Aufgabenblättern.*
 In diesem Aufgabenblatt werden Sie sich mit mehreren verschiedenen Disziplinen beschäftigen, welche Sie zum Teil
@@ -216,16 +217,24 @@ class GCDDivRestIteCmd {
 }
 note bottom: Moderner euklidischen Algorithmus\nfür die Berechnung des größten\ngemeinsames Teilers (ggT)\nper Iteration
 
-GCDDivRestIteCmd *-- Console : use
-GCDDivRestRecCmd *-- Console : use
-GCDSubItCmd      *-- Console : use
-GCDSubRecCmd     *-- Console : use
+class SieveEratosthenes {
+    + execute()
+    + toString()
+}
+
+
+GCDDivRestIteCmd  *-- Console : use
+GCDDivRestRecCmd  *-- Console : use
+GCDSubItCmd       *-- Console : use
+GCDSubRecCmd      *-- Console : use
+SieveEratosthenes *-- Console : use
 
 CommandFactory <|- ICommand
 ICommand <|-- GCDSubRecCmd
 ICommand <|-- GCDSubItCmd
 ICommand <|-- GCDDivRestRecCmd
 ICommand <|-- GCDDivRestIteCmd
+ICommand <|-- SieveEratosthenes
 
 MainApp     *-- CommandFactory : use
 ....
@@ -363,50 +372,8 @@ NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 
 Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *1 ZKP * 0.5 = 0.5 ZKP*
 usw.
 
+include::{docdir}/../includes/terms-of-delivery.adoc[]
 
+include::{docdir}/../includes/feedback.adoc[]
 
-== Feedback
-
-*Senden Sie mir gerne konstruktives Feedback zu den Aufgabenblättern und Dokumenten zu.* Diese Ausarbeitung sind relativ Neu.
-
-CAUTION: Verbesserungvorschläge für dieses Aufgabenblatt können Sie gerne per Git-Patch oder E-Mail an mich senden.
-         Git-Patches geben Ihnen die Möglichkeit zusätzliche Punkte für ein Aufgabenblatt zu erhalten, dafür müssen die
-         Git-Patches atomar sein und im ZIP-Archive abgelegt werden.
-
-
-
-
-[bibliography]
-== References
-
-- [[[REF1, 1]]]
-Thomas Ottmann and Peter Widmayer,
-Algorithmen und Datenstrukturen (German Edition),
-Spektrum Akademischer Verlag}, 2002,
-ISBN: 3827410290.
-
-- [[[REF2, 2]]]
-Sebastian Dworatschek,
-Grundlagen der Datenverarbeitung (de Gruyter Lehrbuch) (German Edition),
-de Gruyter,
-1989,
-ISBN: 3110120259.
-
-- [[[REF5, 3]]]
-Robert Sedgewick, Algorithmen in C++ (German Edition),
-Pearson Studium,
-2002,
-ISBN: 3827370264.
-
-- [[[REF10, Java10]]] http://openbook.rheinwerk-verlag.de/javainsel9[Openbook: Java ist auch eine Insel]
-- [[[REF11, Java11]]] http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm[Java ist auch eine Insel - Kapitel Vererbung]
-- [[[REF12, Java12]]] http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_05_008.htm[Java ist auch eine Insel - Kapitel Vererbung]
-- [[[REF13, Java13]]] https://www.w3schools.com/java/java_interface.asp[JAVA Interfaces]
-- [[[REF14, Java14]]]  http://junit.org[JUnit-Testframework]
-- [[[REF20, Gradle20]]]  https://gradle.org[Gradle]
-- [[[REF21, Gradle21]]]  https://gradle.org/install/[Gradle Installation]
-- [[[REF22, Gradle22]]]  https://gradle.org/guides/[Gradle Tutorials and Guides]
-- [[[REFGitSCM, Git-SCM]]]  https://git-scm.com/[Git]
-- [[[REFGitENv2Book, Git-EN-v2-Book]]]  https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
-- [[[REFGitDEv2Book, Git-DE-v2-Book]]]  https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
-- [[[REFHWProjekteServer, HTW70]]]  https://studi.f4.htw-berlin.de/www/[HTW Berlin - Projekteserver]
+include::{docdir}/../includes/references.adoc[]

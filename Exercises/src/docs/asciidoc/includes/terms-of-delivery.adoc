@@ -1,0 +1,17 @@
+== Abgabebedingungen
+
+Bei jeder Abgabe muss der Gradle-Wrapper `./gradlew` im *Projektrootverzeichnis* vorhanden sein und *funktionieren*,
+sonst wird** keine Bewertung der Aufgabe vorgenommen**. Es dürfen nur relative Pfade verwendet werden.
+*Die folgenden Tasks müssen per Command-line im Projektrootverzeichnis ausführbar sein*:
+
+[source,bash]
+----
+./gradlew clean         Löscht alle generierten Dateien.
+./gradlew build         Programm bauen.
+./gradlew test          Programm testen.
+./gradlew check         Checks.
+./gradlew javadoc       JavaDoc erstellen.
+----
+
+TIP: Verwalten Sie den Source Code über die Versionsverwaltung Git als Übung für zukünftige Projekte
+     in der Angewandten Informatik (AI).

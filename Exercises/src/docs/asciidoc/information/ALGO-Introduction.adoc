@@ -1,7 +1,5 @@
-
 = Laboreinheit: Algorithmen und Datenstrukturen - Introduction
-
-:stem:
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
 
 == Einführung
 
@@ -14,7 +12,7 @@ die Aufgaben im Selbststudium zu lösen. Außerdem werde ich Ihnen Literatur und
 
 == Kurze Vorstellung meiner Person
 
-Kurz zu meiner Person: Meine Name ist Tom Kamberg-Buhrtz und ich bin selbst Absolvent der Hochschule für Technik und
+Kurz zu meiner Person: Meine Name ist Tom Kamberg-Buhrtz und ich bin selbst Master-Absolvent der Hochschule für Technik und
 Wirtschaft Berlin. Zurzeit bin ich in der freien Wirtschaft tätig. Nebenbei arbeite ich
 als Dozent für die Laboreinheit Algorithmen und Datenstrukturen an der HTW Berlin.
 
@@ -28,8 +26,8 @@ als Dozent für die Laboreinheit Algorithmen und Datenstrukturen an der HTW Berl
     ** Entwicklung von mehreren Projekte im Zusammenarbeit mit Museen
     ** Organisation von Konferenzen. z.B. KUI- und WCI-Konferenz
     ** Koordination von Projekten
-* *2015 Tätigkeit - Embedded Firmwareentwickler bis heute;*
-    ** *Kernkompetenzen:* `C++`-Entwicklung und `DevOp`
+* *2015 Tätigkeit* - Embedded Firmwareentwickler bei MELAG Medizintechnik bis heute;
+    ** *Kernkompetenzen:* `C++`-Entwicklung und DevOp
     ** Betreuung und Wartung eingener Linux-Distributionen und Treiberentwicklung,
     ** Betreuung und Weiterentwicklung von Middleware für die Kommunikation,
     ** Betreuung und Weiterentwicklung der Protokollierung und Prozesssteuerung,
@@ -140,26 +138,6 @@ TIP: Für das Anlegen von Git-Repositories kann ich Ihnen den *Projekteserver* h
 . https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
 
 
-== Links und Referenzen
+include::{docdir}/../includes/references.adoc[]
 
-. http://openbook.rheinwerk-verlag.de/javainsel9[Openbook: Java ist auch eine Insel]
-. https://gradle.org[Gradle]
-.. https://gradle.org/install/[Gradle Installation]
-.. https://gradle.org/guides/[Gradle Tutorials and Guides]
-. https://git-scm.com/[Git]
-.. https://git-scm.com/book/en/v2[Pro Git Book - Englisch (PDF etc.)]
-.. https://git-scm.com/book/de/v2[Pro Git Book - Deutsch]
-. https://asciidoctor.org[Asciidoctor]
-.. https://asciidoctor.org/docs/asciidoc-syntax-quick-reference[Asciidoctor - Quick Reference]
-. http://junit.org[JUnit-Testframework]
-. https://studi.f4.htw-berlin.de/www/[HTW Berlin - Projekteserver]
-. https://moodle.htw-berlin.de/login/index.php
-. https://www.deepl.com/translator
-
-== Feedback
-
-*Senden Sie mir gerne konstruktives Feedback zu den Aufgabenblättern und Dokumenten zu.* Diese Ausarbeitung sind relativ Neu.
-
-CAUTION: Verbesserungvorschläge für dieses Aufgabenblatt können Sie gerne per Git-Patch oder E-Mail an mich senden.
-Git-Patches geben Ihnen die Möglichkeit zusätzliche Punkte für ein Aufgabenblatt zu erhalten, dafür müssen die
-Git-Patches atomar sein und im ZIP-Archive abgelegt werden.
+include::{docdir}/../includes/feedback.adoc[]

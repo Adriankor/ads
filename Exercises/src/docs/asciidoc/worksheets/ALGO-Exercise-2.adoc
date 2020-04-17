@@ -1,0 +1,68 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 2
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
+
+include::{docdir}/../includes/caution.adoc[]
+
+== Aufgaben
+
+. Erarbeitung einer einfach verketteten Liste
++
+(10 Pkt.)
+
+.. Erarbeiten Sie schriftlich die notwendige Datenstruktur einer einfach verketteten Liste.
+.. Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+   Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl schriftlich.
+.. Implementieren Sie die notwendigen Datenstrukturen bzw. Datentypen in JAVA unter Verwendung von
+   *class*, *interface*, *enum*  und den entsprechenden gewählten Datentypen.
+
+
+
+. Funktionalität zur Verarbeitung von Elementen einer einfach verketteten Liste
++
+(20 Pkt.)
+
+.. Implementieren Sie eine Funktion zum Erstellen eines neuen Elements.
+.. Implementieren Sie eine Funktion zum Hinzufügen eines Elements vor dem ersten Element.
+.. Implementieren Sie eine Funktion zum Hinzufügen eines Elements nach dem letzten Element.
+.. Implementieren Sie eine Funktion zur Ausgabe eines Elements der Liste.
+.. Implementieren Sie eine Funktion zur Ausgabe der gesamten Liste.
+.. Implementieren Sie eine Funktion zur Ausgabe der Anzahl der Elemente.
+.. Implementieren Sie eine Funktion zum Löschen eines Elements.
+.. Implementieren Sie eine Funktion zum Löschen der gesamten Liste.
+.. Implementieren Sie Funktionalität zum Suchen eines oder mehrerer Studenten nach Vorname, Nachname, Matrikelnummer oder Studiengang.
++
+IMPORTANT: Es muss die Suche nach allen 4 Eigenschaften unterstützt werden!
+.. Implementieren Sie Funktionalität zum Sortieren der Datensätze der Studenten, Matrikelnummer und Studiengang nach zwei selbstgewählten Sortierverfahren.
+
+. Einige Methoden obiger einfach verketteter Liste lassen sich (im Gegensatz zum Array oder einer doppelt verketteten Liste) effizient (in unterschiedlicher Hinsicht) implementieren, andere nicht unbedingt - welche sind das und warum?
++
+(6 Pkt.)
+
+. Implementieren Sie obige Datenstruktur und 4 der oben genannten Funktionalitäten (möglichst laufzeiteffizienter) als doppelt verkettete Liste.
++
+(8 Pkt.)
+
+. Analysieren Sie die Komplexität der von ihnen implementierten Sortierverfahren *allgemein* und *im speziellen Fall* Ihrer Implementierung.
++
+(6 Pkt.)
+
+== Deadline und Punkte
+
+.Maximale Punkte und Deadline
+|===
+|*Deadline:*               | *14.05.2020*
+|*Maximale ZKP:*           | *3 ZKP (Zusätzlicher Klausur Punkt)*
+|*Maximale Punktanzahl:*   | *50 Punkte* == *100 %* == *3 ZKP*
+|===
+
+NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *3 ZKP * 1.0 = 3 ZKP*.
+Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *3 ZKP * 0.5 = 1.5 ZKP*
+usw.
+
+include::{docdir}/../includes/terms-of-delivery.adoc[]
+
+include::{docdir}/../includes/feedback.adoc[]
+
+include::{docdir}/../includes/references.adoc[]
+
+include::ALGO-Exercise-2-Appendix-A.adoc[]

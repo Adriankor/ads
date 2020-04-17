@@ -1,0 +1,77 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 3
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
+
+include::{docdir}/../includes/caution.adoc[]
+
+== Aufgaben
+
+// https://github.com/asciidoctor/asciidoctor-pdf#stem-support
+. Gegeben ist ein gerichteter Graph in mathematisch/algebraischer Darstellung. Stellen Sie diesen in allen Ihnen bekannten Darstellungsformen dar.
++
+(3 Pkt.)
++
+*Gegeben:*
++
+image::{docdir}/../images/math-eq.svg[Embedded, width=50%, align=center]
+
++
+*Lösung:*
+
+.. Grafische Darstellungsform
++
+image::{docdir}/../images/grafische-darstellung.svg[Embedded, width=40%, align=center]
+.. Adjazenzliste
++
+image::{docdir}/../images/adjazenzliste.svg[Embedded, width=40%, align=center]
+.. Adjazenzmatrix
++
+image::{docdir}/../images/adjazenzmatrix.svg[Embedded, width=40%, align=center]
+
+. Gegeben ist ein Graph in grafischer Darstellung. Stellen Sie diesen in allen Ihnen bekannten Darstellungsformen dar.
++
+image::{docdir}/../images/grafische-darstellung-2.svg[Embedded, width=40%, align=center]
++
+(3 Pkt.)
+. Gegeben ist die Adjazenzliste eines Graphen. Stellen Sie diesen in allen Ihnen bekannten Darstellungsformen dar.
++
+image::{docdir}/../images/adjazenzliste-2.svg[Embedded, width=40%, align=center]
++
+(3 Pkt.)
+. Gegeben ist die Adjazenzmatrix eines Graphen. Stellen Sie diesen in allen Ihnen bekannten Darstellungsformen dar.
++
+TIP: Die Zahlen sind hier die Gewichtungen der einzelnen Verbindungen!
++
+(3 Pkt.)
++
+image::{docdir}/../images/adjazenzmatrix-2.svg[Embedded, width=40%, align=center]
+
+. Implementieren Sie basierend auf der Datenstruktur Student einen Stack und ein ausführbares Programm
+  um diesen Stack, bei dem man folgende Funktionen interaktiv in der Kommandozeile ausführen kann
+  (Beispielsweise über ein Menü mit Zahleneingabe):
++
+(8 Pkt.)
+
+.. Implementieren Sie die für einen Stack üblichen Funktionen *push* und *pop*, um ihrem Stack einen Studenten hinzuzufügen oder zu löschen.
+.. Implementieren Sie zusätzlich die Funktionen *peek, empty* und *clear* zum Stack.
+.. Implementieren Sie eine Funktion zur Ausgabe aller Elemente im Stack.
+.. Implementieren Sie eine Funktion zur Ausgabe der Anzahl von Elementen im Stack.
+
+
+== Deadline und Punkte
+
+.Maximale Punkte und Deadline
+|===
+|*Deadline:*               | *28.05.2020*
+|*Maximale ZKP:*           | *2 ZKP (Zusätzlicher Klausur Punkt)*
+|*Maximale Punktanzahl:*   | *20 Punkte* == *100 %* == *2 ZKP*
+|===
+
+NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *2 ZKP * 1.0 = 2 ZKP*.
+Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *2 ZKP * 0.5 = 1.0 ZKP*
+usw.
+
+include::{docdir}/../includes/terms-of-delivery.adoc[]
+
+include::{docdir}/../includes/feedback.adoc[]
+
+include::{docdir}/../includes/references.adoc[]

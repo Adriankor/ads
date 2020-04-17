@@ -30,14 +30,10 @@ asciidoctorPdf {
 
     asciidoctorj {
         requires 'rouge', 'asciidoctor-diagram', 'asciimath'
-
-
         attributes 'build-gradle': file('build.gradle'),
-
         'sourcedir': project.sourceSets.main.java.srcDirs[0],
         'endpoint-url': 'http://example.org',
         'source-highlighter': 'rouge',
-        //        'source-highlighter' : 'coderay',
         'imagesdir': './images',
         'toc': 'left',
         'stem': 'stem',
@@ -47,8 +43,9 @@ asciidoctorPdf {
     }
 }
 
-task open(type:Exec) {
-    commandLine 'okular', "${buildDir}/docs/asciidocPdf/main.pdf"
+task openExample(type:Exec, group: 'ADS', description: 'Open example pdf') {
+    commandLine 'okular', "${buildDir}/docs/asciidocPdf/ALGO-Exercise-X.pdf"
+    dependsOn build
 }
 
 build.dependsOn asciidoctorPdf

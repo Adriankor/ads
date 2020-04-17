@@ -13,44 +13,84 @@ repositories {
 }
 
 dependencies {
+    asciidoctorGems 'rubygems:asciidoctor:2.0.10'
     asciidoctorGems 'rubygems:rouge:3.15.0'
     asciidoctorGems 'rubygems:asciidoctor-diagram:2.0.1'
     asciidoctorGems 'rubygems:asciimath:1.0.9'
-    asciidoctorGems 'rubygems:asciidoctor-bibtex:0.7.1'
 }
 
 apply plugin: 'java'
 
 version = '1.0.0-SNAPSHOT'
 
-
 asciidoctorPdf {
     dependsOn asciidoctorGemsPrepare
 
     baseDirFollowsSourceFile()
 
-    asciidoctorj {
-        requires 'rouge', 'asciidoctor-diagram', 'asciimath'
-
-//          requires 'rouge', 'asciidoctor-diagram', 'asciimath'
-
-
-        attributes 'build-gradle': file('build.gradle'),
-                'sourcedir': project.sourceSets.main.java.srcDirs[0],
-                'endpoint-url': 'http://example.org',
-                'source-highlighter': 'rouge',
-                //        'source-highlighter' : 'coderay',
-                'imagesdir': './images',
-                'toc': 'left',
-                'stem': 'stem',
-                'icons': 'font',
-                'idprefix': '',
-                'idseparator': '-'
+        asciidoctorj {
+            requires 'rouge', 'asciidoctor-diagram', 'asciimath'
+            attributes 'build-gradle': file('build.gradle'),
+                    'sourcedir': project.sourceSets.main.java.srcDirs[0],
+                    'endpoint-url': 'http://example.org',
+                    'source-highlighter': 'rouge',
+                    'imagesdir': 'images',
+                    'toc': 'left',
+                    'stem': 'asciimath',
+                    'icons': 'font',
+                    'idprefix': '',
+                    'idseparator': '-'
     }
 }
 
-task open(type:Exec) {
-    commandLine 'okular', "${buildDir}/docs/asciidocPdf/ALGO-Exercise-1.pdf", "${buildDir}/docs/asciidocPdf/ALGO-Exercise-2.pdf"
+def pathToWorksheets = "${buildDir}/docs/asciidocPdf/worksheets/"
+def pathToInformation = "${buildDir}/docs/asciidocPdf/information/"
+
+task openWorksheet01(type: Exec, group: 'ADS', description: 'Open worksheet 1') {
+    commandLine 'okular', pathToWorksheets + "ALGO-Exercise-1.pdf"
+    dependsOn build
+}
+
+task openWorksheet02(type: Exec, group: 'ADS', description: 'Open worksheet 2') {
+    commandLine 'okular', pathToWorksheets + "ALGO-Exercise-2.pdf"
+    dependsOn build
+}
+
+task openWorksheet03(type: Exec, group: 'ADS', description: 'Open worksheet 3') {
+    commandLine 'okular', pathToWorksheets + "ALGO-Exercise-3.pdf"
+    dependsOn build
+}
+
+task openWorksheet04(type: Exec, group: 'ADS', description: 'Open worksheet 4') {
+    commandLine 'okular', pathToWorksheets + "ALGO-Exercise-4.pdf"
+    dependsOn build
+}
+
+task openWorksheet05(type: Exec, group: 'ADS', description: 'Open worksheet 5') {
+    commandLine 'okular', pathToWorksheets + "ALGO-Exercise-5.pdf"
+    dependsOn build
+}
+
+task openWorksheet06(type: Exec, group: 'ADS', description: 'Open worksheet 6') {
+    commandLine 'okular', pathToWorksheets + "ALGO-Exercise-6.pdf"
+    dependsOn build
+}
+
+task openWorksheets(group: 'ADS', description: 'Open all PDFs of worksheets') {
+    dependsOn openWorksheet01, openWorksheet02, openWorksheet03, openWorksheet04, openWorksheet05, openWorksheet06
+}
+
+task openInformationIntoduction(type:Exec, group:'ADS', description: 'Open introduction pdf') {
+    commandLine 'okular', pathToInformation + "ALGO-Introduction.pdf"
+    dependsOn build
+}
+
+task openInformation(group: 'ADS', description: 'Open all PDFs of information') {
+    dependsOn openInformationIntoduction
+}
+
+task open(group: 'ADS', description: 'Open all PDFs') {
+    dependsOn openInformation, openWorksheets
 }
 
 build.dependsOn asciidoctorPdf

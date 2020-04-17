@@ -1,0 +1,12 @@
+== Feedback
+:url-issues: https://github.com/CSV-Tom/ads/issues
+
+Senden Sie mir gerne konstruktives Feedback zu den Aufgabenblättern und Dokumenten zu.
+
+CAUTION: Verbesserungsvorschläge für dieses Aufgabenblatt können Sie gerne per Git-Patch oder E-Mail an mich senden.
+Git-Patches geben Ihnen die Möglichkeit zusätzliche Punkte für ein Aufgabenblatt zu erhalten, dafür müssen die
+Git-Patches atomar sein und im ZIP-Archive abgelegt werden.
+
+*Viel Spaß und Erfolg bei der Bearbeitung der Aufgabenblätter!*
+
+_Erstellungsdatum und -zeit: {docdate} - {doctime}_

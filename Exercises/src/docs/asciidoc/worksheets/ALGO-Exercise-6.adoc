@@ -1,0 +1,60 @@
+= Laboreinheit: Algorithmen und Datenstrukturen - Aufgabenblatt 6
+Tom Kamberg-Buhrtz <buhrtz@htw-berlin.de>
+
+include::{docdir}/../includes/caution.adoc[]
+
+== Aufgaben
+
+. Lauflängenkodierung
++
+(24 Pkt.)
+
+.. Erarbeiten Sie sich die Implementierung in Pseudocode einer Lauflängenkodierung für Groß- und Kleinbuchstaben!
+.. Welche Stärken und Schwächen hat die Lauflängenkodierung?
+.. Implementieren Sie die Lauflängenkodierung anhand Ihres selbst formulierten Pseudocodes!
+.. Implementieren Sie auch eine Funktion zum Dekodieren!
+
+
+. Huffman-Kodierung
++
+(25 Pkt.)
+
+.. Erarbeiten Sie sich für die Programmiersprache JAVA eine sinnvolle Datenstruktur zur Berechnung der Huffman-Kodierung einer Zeichenkette.
+.. Benennen Sie wichtige Funktionen, die zur weiteren Umsetzung notwendig sind.
+.. Machen Sie sich mit bitweisen Operationen (Setzen, Clearen, Verschieben und Verknüpfen) in der Programmiersprache JAVA vertraut.
+.. Implementieren Sie die notwendige(n) Datenstruktur(en) für die Huffman-Kodierung.
+.. Implementieren Sie die Funktionen zum Kodieren und Dekodieren.
+
+
+. Huffman-Kodierung & Lauflängenkodierung
++
+(50 Pkt.)
+
+.. Implementieren Sie die beiden Kompressionsverfahren in der Programmiersprache JAVA (10 Pkt.).
+.. Implementieren Sie eine Funktion zum Einlesen einer beliebigen Textdatei per Kommandozeilenargument (5 Pkt.).
+.. Wenden Sie die beiden Kompressionsverfahren auf den eingelesenen Datenstrom an (10 Pkt.).
+.. Implementieren Sie eine Funktion zum Schreiben des komprimierten Datenstroms in eine Datei (5 Pkt.).
+.. Implementieren Sie weitere Kommandozeilenargumente für die kombinierte und separierte Anwendung der zwei Kompressionsmethoden (10 Pkt.).
+.. Vergleichen Sie die Kompressionsergebnisse für die vier Möglichkeiten: Huffman, Lauflängenkodierung, Huffman-RLE, RLE-Huffman (20 Pkt.)!
+
+
+
+== Deadline und Punkte
+
+.Maximale Punkte und Deadline
+|===
+|*Deadline:*               | *24.06.2020*
+|*Maximale ZKP:*           | *3 ZKP (Zusätzlicher Klausur Punkt)*
+|*Maximale Punktanzahl:*   | *99 Punkte* == *100 %* == *3 ZKP*
+|===
+
+NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *3 ZKP * 1.0 = 3 ZKP*.
+Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *3 ZKP * 0.5 = 1.5 ZKP*
+usw.
+
+include::{docdir}/../includes/terms-of-delivery.adoc[]
+
+include::{docdir}/../includes/feedback.adoc[]
+
+include::{docdir}/../includes/references.adoc[]
+

@@ -1,0 +1,522 @@
+[appendix]
+== Leitfaden für die Listen-Implementierung
+
+IMPORTANT: Lesen bitte als Erstes die Folien zum Themengebiet Listen sowie diesen Leitfaden, bevor Sie mit der Bearbeitung und Umsetzung des
+           Aufgabenblattes starten.
+
+. *Step* – Generisches Interface `Listable<T>` anlegen:
++
+
+[plantuml, ClassDiagramListableLists, svg]
+....
+interface Listable<T> {
+    +void add(T data)
+    +void add(int index, T data)
+    +void addFirst(T data)
+    +void addLast(T data)
+    +T get(int index)
+    +void set(int index, T data);
+    +void remove(int index)
+    +void clear()
+    +int size()
+    +void printAll()
+    +boolean isEmpty()
+}
+....
++
+Bevor wir mit der Implementierung der Aufgabe starten, wird als Erstes ein *generisches Interface* `Listable<T>` angelegt.
+Dieses bildet die Grundlage für die Implementierung einer *einfach und doppelt verketteten Liste*. Deklarieren Sie das
+Interface wie folgt:
++
+
+[source,java,linesmen]
+----
+public interface Listable<T> {
+
+    void add(T data);
+
+    void add(int index, T data);
+
+    void addFirst(T data);
+
+    void addLast(T data);
+
+    void set(int index, T data);
+
+    T get(int index);
+
+    void remove(int index);
+
+    void clear();
+
+    int size();
+
+    void printAll();
+
+    boolean isEmpty();
+}
+----
+
+. *Step* – Generische Klasse `SinglyLinkedList<T>` anlegen:
++
+[plantuml,  ClassDiagramSinglyLinkedListLists, svg]
+....
+interface Listable<T>
+note right: Generisches Interface für Listen.
+
+-class Node<T> {
+  -T data;
+  -Node next;
+}
+note right: Private eingebettete Klasse.
+
+class SinglyLinkedList<T> {
+  -Node head
+  +void add(T data)
+  +void add(int index, T data)
+  +void addFirst(T data)
+  +void addLast(T data)
+  +T get(int index)
+  +void set(int index, T data);
+  +void remove(int index)
+  +void clear()
+  +int size()
+  +void printAll()
+ +boolean isEmpty()
+}
+note right: Einfach verkettete Liste, welche die Methoden\n aus dem Interface ausimplementiert.
+
+SinglyLinkedList  *-- Node
+Listable <|-- SinglyLinkedList
+....
++
+Als nächstes wird die Klasse `SinglyLinkedList` als *generische Klasse* angelegt.
++
+[source,java,linesmen]
+----
+public class SinglyLinkedList<T> implements Listable<T> {
+
+	[...]
+
+}
+----
++
+Diese implementiert das Interface `Listable<T>` mit dem *Schlüsselwort* `implements`. Achten Sie besonders auf das `<T>`.
++
+TIP: Nachdem Sie das Interface mit `Listable<T>` zur Klasse korrekt hinzugefügt haben, können Sie die Glühbirne oder
+     das Kontextmenü verwenden, um alle `unimplemented Methods` mit nur einem Klick zu generieren.
+     Diese Funktionalität gibt es in beiden IDEs Eclipse und IntellJ.
++
+Nachdem Sie die Generierung der Methoden abgeschlossen haben, erweitern wir die Klasse `SinglyLinkedList<T>` mit
+der eingebetteten Klasse `Node` und fügen den Listenkopf `Node head` ein. Dieses Konstrukt wird für den Aufbau
+der *einfach verketteten Liste* benötigt.
++
+[source,java,linesmen]
+----
+public class SinglyLinkedList<T> implements Listable<T> {
+
+    Node head = null;         // Head of list
+
+    private class Node {      // Nested class
+        T data;
+        Node next;
+    }
+
+    @Override
+    public void add(T data) {
+        // TODO Auto-generated method stub
+        // Diese Methode wurde durch die IDE automatisch generiert mit einem Klick.
+    }
+
+    [...]
+}
+----
+
+. *Step* – Generische Klasse `DoublyLinkedList<T>` anlegen:
++
+[plantuml, ClassDiagramDoublyLinkedListLists, svg]
+....
+interface Listable<T>
+note right: Generisches Interface für Listen.
+
+-class Node<T> {
+  -T data;
+  -Node prev;
+  -Node next;
+}
+note right: Private eingebettete Klasse.
+
+class DoublyLinkedList<T> {
+  -Node head;
+  -Node tail;
+  +void add(T data)
+  +void add(int index, T data)
+  +void addFirst(T data)
+  +void addLast(T data)
+  +T get(int index)
+  +void set(int index, T data);
+  +void remove(int index)
+  +void clear()
+  +int size()
+  +void printAll()
+  +boolean isEmpty()
+}
+note right: Doppelt verkettete Liste, welche die Methoden\n aus dem Interface ausimplementiert.
+
+DoublyLinkedList  *-- Node
+Listable <|-- DoublyLinkedList
+....
++
+Als nächstes wird die Klasse `DoublyLinkedList` als *generische Klasse* angelegt.
++
+[source,java,linesmen]
+----
+package lists;
+
+public class DoublyLinkedList<T> implements Listable<T> {
+
+	[...]
+}
+----
++
+Diese implementiert das Interface `Listable<T>` mit dem *Schlüsselwort* `implements`.
++
+TIP: Nachdem Sie das Interface mit `Listable<T>` zur Klasse korrekt hinzugefügt haben, können Sie die Glühbirne oder
+das Kontextmenü erneut verwenden, um alle `unimplemented Methods` mit nur einem Klick zu generieren.
+Diese Funktionalität gibt es in beiden IDEs Eclipse und IntellJ.
++
+Nachdem Sie die Generierung der Methoden abgeschlossen haben, erweitern wir die Klasse `DoublyLinkedList<T>` mit
+der eingebetteten Klasse `Node` und fügen den Listenkopf `Node head` und das Listenende `Node tail` ein.
+Dieses Konstrukt wird für den Aufbau der *doppelt verketteten Liste* benötigt.
++
+[source,java,linesmen]
+----
+public class DoublyLinkedList<T>  implements Listable<T> {
+
+    Node head = null;     // Head of list
+    Node tail = null;     // Tail of list
+
+    private class Node {      // Nested class
+        T data;
+        Node next;
+        Node prev;
+    }
+
+    @Override
+    public void add(T data) {
+        // TODO Auto-generated method stub
+        // Diese Methode wurde durch die IDE automatisch generiert mit einem Klick.
+    }
+
+    [...]
+}
+----
+
+
+
+. *Step* – Methoden der `SinglyLinkedList<T>` ausimplementieren:
++
+.. Als Erstes implementieren wir die Methode für das Hinzufügen eines Datenobjektes am Ende der einfach verketteten Liste.
++
+[source,java,linesmen]
+----
+@Override
+public void addLast(T data) {
+    Node node = new Node();
+    node.data = data;
+    node.next = null;
+
+    if (head == null) {
+        head = node;
+    } else {
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = node;
+    }
+}
+----
++
+WARNING: Niemals direkt auf Head operieren!
++
+.. Als Nächstes implementieren wir die Methode für das Prüfen, ob die Liste leer ist.
++
+[source,java,linesmen]
+----
+@Override
+public boolean isEmpty() {
+    return head == null;
+}
+----
++
+.. Danach implementieren wir die Methode für das Ermitteln der Größe der einfach verketteten Liste.
++
+[source,java,linesmen]
+----
+@Override
+public int size() {
+    int counter = 0;
+    Node temp = head;
+    while (temp != null) {
+        counter++;
+        temp = temp.next;
+    }
+    return counter;
+}
+----
++
+TIP: Es gibt eine bessere Implementierung für das Ermitteln der Größe der Liste. An den richtigen Stellen muss
+     eine Membervariable inkrementiert und dekrementiert werden, dann wird diese Methode effizienter. Die Effektivität
+     liegt bereits bei beiden Implementierungen vor.
++
+.. Darauf implementieren wir die Methode `get` für das Holen eines Datenobjektes.
++
+[source,java,linesmen]
+----
+@Override
+public T get(int index) {
+    int counter = 0;
+    Node temp = head;
+    while (temp != null) {
+        if (counter == index) {
+            return temp.data;
+        }
+        counter++;
+        temp = temp.next;
+    }
+    return null;
+}
+----
++
+.. Als Nächstes implementieren wir die Methode für das Löschen aller Datenobjekte der einfach verketteten Liste.
++
+[source,java,linesmen]
+----
+@Override
+public void clear() {
+    head = null;
+}
+----
++
+.. Im Anschluss implementieren wir die Methode für das Ausgeben der Datenobjekte der einfach verketteten Liste.
++
+[source,java,linesmen]
+----
+@Override
+public void printAll() {
+    Node temp = head;
+    while (temp != null) {
+        System.out.println(temp.data);
+        temp = temp.next;
+    }
+}
+----
++
+IMPORTANT: Die Methode `printAll` gehört nicht in das Interface `Listable<T>`. Das Thema Iteratoren wird an dieser Stelle
+           nicht weiter behandelt. Iteratoren wären hier die saubere Lösung für das Iterieren über die Datenobjekte in der Liste.
+           Dies wird in dieser Aufgabenstellung nicht verlangt.
+
+. *Step* – Datenobjekt `Student` anlegen:
++
+[plantuml, ClassDiagrammStudentLists, svg]
+....
+class Student {
+  -String prename
+  -String surname
+  -int course
+  -int matriculationNumber
+  +Student(String prename, String surname, int course, int matriculationNumber)
+  +String toString()
+  +String getSurname()
+  +void setSurname(String Surname)
+  +String getPrename()
+  +void setPrename(String prename)
+  +int getCourse()
+  +void setCourse(int course)
+  +int getMatriculationNumber()
+  +void setMatriculationNumber(int matriculationNumber)
+}
+....
++
+Bevor wir die Liste testen können, müssen wir ein Datenobjekt anlegen. Wir legen uns hier das Datenobjekt `Student` an.
+Es können auch andere Datenobjekte von der Liste verwaltet werden, da diese generisch ist. Legen Sie bitte einen Studenten
+mit den folgenden Eigenschaften: Vorname, Nachname, Matrikelnummer und Kurs; an. Der Kurs soll später als *Enum*
+verwaltet werden, für unsere Testzwecke reicht aber *int* als *primitiver Datentyp* aus.
++
+[source,java,linesmen]
+----
+package data;
+
+public class Student {
+    private String prename;
+    private String surname;
+    private int course;
+    private int matriculationNumber;
+
+    // Automatisch per IDE generiert - Generate Constructor using fields
+    // Automatisch per IDE generiert - Generate toString
+    // Automatisch per IDE generiert - Generate getter and setter
+
+    [...]
+}
+----
++
+TIP: Der Konstruktor mit Parametern, die Getter/Setter und die toString-Methode für den Studenten können per IDE
+     automatisch generiert werden, nachdem Sie die Eigenschaften (Membervariablen: Prename, Surname, Course und
+     Matriculation number) vom Studenten deklariert haben.
+
+
+. *Step* – Testen der `SinglyLinkedList<T>` und `DoublyLinkedList<T>`:
++
+Nachdem wir die Grundlagen für das Testen der Liste gelegt haben, können wir ein kleines Testprogramm schreiben, welches
+ein kleinen Teil der Funktionalitäten von unserer **einfach und doppelt verketteten Liste **testet.
++
+[source,java,linesmen]
+----
+import data.Student;
+import lists.DoublyLinkedList;
+import lists.Listable;
+import lists.SinglyLinkedList;
+
+public class MyApp {
+
+    public static void main(String[] args) {
+        run(new SinglyLinkedList<Student>());
+        run(new DoublyLinkedList<Student>());
+    }
+
+    private static void run(Listable<Student> students) {
+
+        students.addLast(readStudentsFromStdIn(students));
+
+        Student s2 = new Student("Sheldon", "Cooper", 67, 78);
+        Student s3 = new Student("Micky", "Maus", 67, 45);
+        students.add(s2);
+        students.addLast(s3);
+
+        printList(students);
+
+        students.clear();
+    }
+
+    private static Student readStudentsFromStdIn()
+    {
+        // TODO: Read values from System.in (Stdin)
+        Student student = new Student("Ted", "Mosby", 89, 89);
+        return student;
+    }
+
+    private static void printList(Listable<Student> students) {
+        System.out.println("Type: " + students.getClass().getSimpleName());
+        System.out.println("Size: " + students.size());
+        System.out.println("IsEmpty: " + students.isEmpty());
+        System.out.println("Students");
+        System.out.println("Get:" + students.get(0));
+        System.out.println("Get:" + students.get(1));
+        System.out.println("Get:" + students.get(2));
+        students.printAll();
+    }
+}
+----
+
++
+Vervollständigen Sie die Implementierung der einfach und doppelt verketteten Liste. Lesen Sie das Aufgabenblatt
+bzgl. der einfach und doppelt verketteten Liste genau durch.
+
++
+IMPORTANT: Ab hier müssen Sie die Implementierung alleine vervollständigen.
+
++
+Folgend die komplette UML-Notation vom Testprogramm. *Es handelt sich um ein Testprogramm, es muss für die Erfüllung
+der Aufgabe an mehreren Stellen angepasst werden.* Hiermit ist der Grundstein für den Anfang des Aufgabenblattes gelegt.
+Sie sollten jetzt auch *Code-Snippets aus den vorherigen Aufgabenblätter wiederverwenden*,  wie z. B. die Klasse *Console*.
+
++
+[plantuml,  ClassDiagramCompleteLists, svg]
+....
+package lists {
+
+  interface Listable<T> {
+    +void add(T data)
+    +void add(int index, T data)
+    +void addFirst(T data)
+    +void addLast(T data)
+    +T get(int index)
+    +void set(int index, T data);
+    +void remove(int index)
+    +void clear()
+    +int size()
+    +void printAll()
+    +boolean isEmpty()
+  }
+
+  class SinglyLinkedList<T> {
+    -Node head
+    -int counter
+    +void add(T data)
+    +void add(int index, T data)
+    +void addFirst(T data)
+    +void addLast(T data)
+    +T get(int index)
+    +void set(int index, T data);
+    +void remove(int index)
+    +void clear()
+    +int size()
+    +void printAll()
+    +boolean isEmpty()
+  }
+
+  class DoublyLinkedList<T> {
+    -Node head
+    -Node tail
+    -int counter
+    +void add(T data)
+    +void add(int index, T data)
+    +void addFirst(T data)
+    +void addLast(T data)
+    +T get(int index)
+    +void set(int index, T data);
+    +void remove(int index)
+    +void clear()
+    +int size()
+    +void printAll()
+    +boolean isEmpty()
+  }
+
+
+   Listable <|-- SinglyLinkedList
+   Listable <|-- DoublyLinkedList
+}
+
+package data {
+  class Student {
+	-String prename
+	-String surname
+	-int course
+	-int matriculationNumber
+	+Student(String prename, String surname, int course, int matriculationNumber)
+	+String toString()
+	+String getSurname()
+	+void setSurname(String Surname)
+	+String getPrename()
+	+void setPrename(String prename)
+	+int getCourse()
+	+void setCourse(int course)
+	+int getMatriculationNumber()
+	+void setMatriculationNumber(int matriculationNumber)
+  }
+}
+
+class MyApp {
+  + void main(String[] args)
+  - static void run(Listable<Student> students)
+  - static void printList(Listable<Student> students)
+  - static Student readStudentsFromStdIn()
+}
+
+MyApp  ..> Student : use
+MyApp  ..> Listable : use
+MyApp  ..> SinglyLinkedList : use
+MyApp  ..> DoublyLinkedList : use
+....
