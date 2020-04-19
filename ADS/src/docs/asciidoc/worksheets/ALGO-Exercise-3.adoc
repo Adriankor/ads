@@ -5,7 +5,6 @@ include::{docdir}/../includes/caution.adoc[]
 
 == Aufgaben
 
-// https://github.com/asciidoctor/asciidoctor-pdf#stem-support
 . Gegeben ist ein gerichteter Graph in mathematisch/algebraischer Darstellung. Stellen Sie diesen in allen Ihnen bekannten Darstellungsformen dar.
 +
 (3 Pkt.)
@@ -59,16 +58,26 @@ image::{docdir}/../images/adjazenzmatrix-2.svg[Embedded, width=40%, align=center
 
 == Deadline und Punkte
 
+//------------ covid-19 ----------------------------
 .Maximale Punkte und Deadline
 |===
-|*Deadline:*               | *28.05.2020*
-|*Maximale ZKP:*           | *2 ZKP (Zusätzlicher Klausur Punkt)*
-|*Maximale Punktanzahl:*   | *20 Punkte* == *100 %* == *2 ZKP*
+|*Deadline:*               | *21.05.2020 - 23:55*
+|*Maximale Punktanzahl:*   | *20 Punkte*
 |===
 
-NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *2 ZKP * 1.0 = 2 ZKP*.
-Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *2 ZKP * 0.5 = 1.0 ZKP*
-usw.
+include::{docdir}/../includes/covid-19.adoc[]
+//------------ covid-19 ----------------------------
+
+//.Maximale Punkte und Deadline
+//|===
+//|*Deadline:*               | *28.05.2020 - 23:55*
+//|*Maximale ZKP:*           | *2 ZKP (Zusätzlicher Klausur Punkt)*
+//|*Maximale Punktanzahl:*   | *20 Punkte* == *100 %* == *2 ZKP*
+//|===
+
+//NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *2 ZKP * 1.0 = 2 ZKP*.
+//Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *2 ZKP * 0.5 = 1.0 ZKP*
+//usw.
 
 include::{docdir}/../includes/terms-of-delivery.adoc[]
 

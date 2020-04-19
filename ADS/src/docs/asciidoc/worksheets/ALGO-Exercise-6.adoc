@@ -41,16 +41,26 @@ include::{docdir}/../includes/caution.adoc[]
 
 == Deadline und Punkte
 
+//------------ covid-19 ----------------------------
 .Maximale Punkte und Deadline
 |===
-|*Deadline:*               | *24.06.2020*
-|*Maximale ZKP:*           | *3 ZKP (Zusätzlicher Klausur Punkt)*
-|*Maximale Punktanzahl:*   | *99 Punkte* == *100 %* == *3 ZKP*
+|*Deadline:*               | *24.06.2020 - 23:55*
+|*Maximale Punktanzahl:*   | *99 Punkte*
 |===
 
-NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *3 ZKP * 1.0 = 3 ZKP*.
-Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *3 ZKP * 0.5 = 1.5 ZKP*
-usw.
+include::{docdir}/../includes/covid-19.adoc[]
+//------------ covid-19 ----------------------------
+
+//.Maximale Punkte und Deadline
+//|===
+//|*Deadline:*               | *24.06.2020 - 23:55*
+//|*Maximale ZKP:*           | *3 ZKP (Zusätzlicher Klausur Punkt)*
+//|*Maximale Punktanzahl:*   | *99 Punkte* == *100 %* == *3 ZKP*
+//|===
+
+//NOTE: Wird die volle Punktzahl beim Aufgabenblatt erreicht, dann haben Sie *100 %* erfüllt und somit einen *3 ZKP * 1.0 = 3 ZKP*.
+//Haben Sie nur *50 %* erfüllt, dann berechnet sich der zusätzliche Klausurpunkt, wie folgt  *3 ZKP * 0.5 = 1.5 ZKP*
+//usw.
 
 include::{docdir}/../includes/terms-of-delivery.adoc[]
 
