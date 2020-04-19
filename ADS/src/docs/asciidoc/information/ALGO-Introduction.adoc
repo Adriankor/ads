@@ -116,6 +116,21 @@ TIP: Desweiteren kann ich Ihnen persönlich LaTeX ans Herz legen. Der Einarbeitu
      Anfang hoch! Ich persönlich habe meine Masterarbeit mit LaTeX geschrieben und bereue es bis
      zum heutigen Zeitpunkt nicht!
 
+== Deadlines für die Aufgabenblätter
+
+.Maximale Punkte und Deadline
+|===
+|                    | *Themen*                                                                                                         | *Deadline*         | *Punkte*
+| *Aufgabenblatt 1*  | Gradle und allgemeine Algorithmen, wie z.B. ggT, Sieb des Eratosthenes und usw.                                  | 23.04.2020 - 23:55 | 64
+| *Aufgabenblatt 2*  | Einfache und doppelt verkettete Liste, sowie Sortierverfahren                                                    |14.05.2020 - 23:55 | 50
+| *Aufgabenblatt 3*  | Graphen, Adjazenzmatrix, Adjazenzliste, mathematische Darstellung und abstrakte Datentypen (ADTs) wie z.B. Stack | 21.05.2020 - 23:55 | 20
+//| *Aufgabenblatt 4*  | Skyline und Türme von Hanoi                                                                                    | 11.06.2020 - 23:55 | 62
+| *Aufgabenblatt 5*  | Hashverfahren (Linares Sondieren, Quadratisches Sondieren und Double Hashing), Sortierverfahren                  | 11.06.2020 - 23:55 | 58
+| *Aufgabenblatt 6*  | Lauflängenkodierung und Huffman-Kodierung | 24.06.2020 - 23:55 | 99
+|===
+
+IMPORTANT: *Aufgabenblatt 1* ist Voraussetzung für die Abgabe weiterer Aufgabenblätter!
+
 == Git - Open-Source-Tool zur verteilten Versionskontrolle von Software
 
 TIP: Sie sollten sich definitiv parallel mit dem Versionkontrollsystem *git* beschäftigen.
