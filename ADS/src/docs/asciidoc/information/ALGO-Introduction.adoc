@@ -64,11 +64,12 @@ IMPORTANT: Die Hinweise sollen Sie genau lesen und verstehen. Bei Fragen wenden 
 
 . *Alle Dateien müssen als ZIP-Archive (.zip) abgegeben werden*,
 . Schriftliche Ausarbeitungen *müssen* im *PDF-Format* abgegeben werden,
-. Für die Zulassung zur Klausur müssen sie *mindestens 3 Punkte* erreichen,
+. COVID-19 [line-through]#Für die Zulassung zur Klausur müssen sie *mindestens 3 Punkte* erreichen,#
 . Die *Abgaben* müssen *per Gradle-Befehl baubar und ausführbar* sein,
-. Es können *maximal 6 zusätzliche Punkte* zur Klausur erreicht werden,
-. Die *maximale Anzahl der möglichen Punkte pro Aufgabenblatt* und die *Deadline* steht auf der letzten Seite jedes Aufgabenblattes,
-  sonst wird *keine Bewertung des Aufgabenblattes vorgenommen;*
+. COVID-19 [line-through]#Es können *maximal 6 zusätzliche Punkte* zur Klausur erreicht werden,#
+. Die *Abgabebedingungen*, *maximalen Punkte* und die *Deadline* steht auf der letzten Seite des jeweiligen Aufgabenblattes
+
+IMPORTANT: Bitte Halten Sie die Bedingungen und Deadlines ein, sonst wird *keine Bewertung des Aufgabenblattes vorgenommen!*
 
 
 === Projektstrukturierung der Abgabe
@@ -124,6 +125,7 @@ TIP: Desweiteren kann ich Ihnen persönlich LaTeX ans Herz legen. Der Einarbeitu
 | *Aufgabenblatt 1*  | Gradle und allgemeine Algorithmen, wie z.B. ggT, Sieb des Eratosthenes und usw.                                  | 23.04.2020 - 23:55 | 64
 | *Aufgabenblatt 2*  | Einfache und doppelt verkettete Liste, sowie Sortierverfahren                                                    |14.05.2020 - 23:55 | 50
 | *Aufgabenblatt 3*  | Graphen, Adjazenzmatrix, Adjazenzliste, mathematische Darstellung und abstrakte Datentypen (ADTs) wie z.B. Stack | 21.05.2020 - 23:55 | 20
+| *Aufgabenblatt 4*  | Entfällt in diesem Semester                                                                                      | -                  | -
 //| *Aufgabenblatt 4*  | Skyline und Türme von Hanoi                                                                                    | 11.06.2020 - 23:55 | 62
 | *Aufgabenblatt 5*  | Hashverfahren (Linares Sondieren, Quadratisches Sondieren und Double Hashing), Sortierverfahren                  | 11.06.2020 - 23:55 | 58
 | *Aufgabenblatt 6*  | Lauflängenkodierung und Huffman-Kodierung | 24.06.2020 - 23:55 | 99
