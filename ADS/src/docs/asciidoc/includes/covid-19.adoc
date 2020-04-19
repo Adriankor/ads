@@ -1,0 +1,4 @@
+IMPORTANT: Auf Grund von COVID-19 wird es in diesem Semester *keine Klausur geben, dementsprechend gibt es keine Zusatzpunkte zur Klausur*. Als Alternative müssen *vier
+technische Aufgabenblätter inklusive Aufgabenblatt 1* aus der *Laboreinheit* Algorithmen und Datenstrukturen lösen und abgeben. Prof. Sieck wird Ihnen
+noch weitere Aufgabenblätter zur Verfügung stellen, welche ebenfalls Voraussetzung für das Bestehen von Algorithmen und Datenstrukturen sind.
+
